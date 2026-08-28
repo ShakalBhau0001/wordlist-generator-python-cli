@@ -1,4 +1,4 @@
-# 🔐 Wordlist Generator (Python)
+# 🔐 Wordlist Generator CLI (Python)
 
 A complete and educational Python implementation of a targeted, keyword-based wordlist generator.
 This project demonstrates token permutation, case/leetspeak variation, and numeric-tail expansion using structured logic.
@@ -10,7 +10,7 @@ It is created as a learning and academic project to understand how targeted pass
 ## 🧱 Project Structure
 
 ```bash
-wordlist-generator-python/
+wordlist-generator-python-cli/
 │
 ├── assets/             # Screenshots
 ├── main.py             # Basic CLI version
@@ -88,13 +88,13 @@ This project is built to:
 ### 1️⃣ Clone the repository
 
 ```bash
-git clone https://github.com/ShakalBhau0001/wordlist-generator-python.git
+git clone https://github.com/ShakalBhau0001/wordlist-generator-python-cli.git
 ```
 
 ### 2️⃣ Navigate to the project folder
 
 ```bash
-cd wordlist-generator-python
+cd wordlist-generator-python-cli
 ```
 
 ### 3️⃣ Install Dependencies
@@ -171,7 +171,6 @@ python main.py -f John -l Doe -o custom --min-len 8 --max-len 16
 - Smarter leetspeak (multi-substitution combinations)
 - Progress bar for the Basic CLI version
 - Add input validation enhancements
-- Create GUI version
 - Export directly in Hashcat/John-compatible formats
 
 ---
@@ -186,7 +185,7 @@ python main.py -f John -l Doe -o custom --min-len 8 --max-len 16
 
 ## 📸 Preview
 
-![Rich CLI Preview](assets/WG.png)
+![CLI Preview](assets/WG.png)
 
 ---
 
