@@ -69,7 +69,6 @@ def unique_len_filtered(words, min_len: int, max_len: int):
 def parse_date_tokens(date_str: str):
     tokens = set()
     ds = re.sub(r"[^\d]", "", date_str)
-
     if len(ds) == 8:  # ddmmyyyy
         day, month, year = ds[:2], ds[2:4], ds[4:]
     elif len(ds) == 6:  # ddmmyy
@@ -102,7 +101,6 @@ def get_unique_filename(basename: str, ext: str) -> str:
 def build_wordlist(tokens, args):
     tokens = [t for t in tokens if t]
     tokens = list(dict.fromkeys(tokens))  # unique, preserve order
-
     base = set()
     max_combo = min(args.max_combo, len(tokens))
     for r in range(1, max_combo + 1):
@@ -131,15 +129,14 @@ def build_wordlist(tokens, args):
     return unique_len_filtered(expanded, args.min_len, args.max_len)
 
 
-
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
         prog="main.py",
-        description="Basic CLI wordlist generator (no external dependencies)",
+        description="Basic CLI Wordlist Generator (no external dependencies are required)",
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog=(
-            "Examples:\n"
-            "  python main.py -f John -l Doe -n JD -t HexTeam -d 15081995\n"
+            "Examples:- \n"
+            "  python main.py -f John -l Doe -n JD -t TEamSB -d 15081995\n"
             "  python main.py --first John --last Doe --date 15/08/1995\n"
             "  python main.py -f John -l Doe -o custom --min-len 8 --max-len 16\n"
         ),
@@ -186,11 +183,9 @@ def build_parser() -> argparse.ArgumentParser:
 def main():
     parser = build_parser()
     args = parser.parse_args()
-
     print("=" * 40)
     print("Wordlist Generator")
     print("=" * 40)
-
     tokens = [
         clean_token(x)
         for x in (args.first, args.last, args.nick, args.team)
@@ -207,7 +202,6 @@ def main():
 
     print("Generating wordlist....")
     final_words = build_wordlist(tokens, args)
-
     output_file = get_unique_filename(args.output, ".txt")
     with open(output_file, "w", encoding="utf-8") as f:
         f.writelines(w + "\n" for w in sorted(final_words))
