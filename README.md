@@ -7,6 +7,16 @@ It is created as a learning and academic project to understand how targeted pass
 
 ---
 
+## 🔄 Also Available as a GUI Tool
+
+Prefer a visual, browser-based interface instead of the terminal?
+
+👉 **_wordlist-generator-python-gui_** is the graphical (Streamlit) version of this project, built for a simpler point-and-click experience.
+
+> **🔗 GUI Repository: [wordlist-generator-python-gui](https://github.com/ShakalBhau0001/wordlist-generator-python-gui)**
+
+---
+
 ## 🧱 Project Structure
 
 ```bash
@@ -25,35 +35,41 @@ wordlist-generator-python-cli/
 ## ✨ Features
 
 ### 🔑 Personal-Info-Based Token Generation
+
 - Accepts first name, last name, nickname, team/company, and date
 - Cleans and normalizes each input into safe tokens
 - Parses dates (`ddmmyyyy` / `ddmmyy`) into day, month, year, and combined sub-tokens
 - Demonstrates structured, targeted wordlist construction
 
 ### 🔒 Word Building
+
 - Permutes tokens (1 to 3 combined by default) in every order
 - Joins combinations with `-`, `_`, `.`, or no separator
 - Reads back the full permutation set to build the base wordlist
 
 ### 🎭 Variant Expansion
+
 - Case variants: lower, UPPER, Capitalized, and CamelCase
 - Leetspeak variants (`a→4`, `e→3`, `i→1`, `o→0`, `s→5`, `t→7`, `b→8`)
 - Numeric tail suffixes (`00`–`99` and the last 10 years)
 - Final length filtering (default: 7–24 characters)
 
 ### 🧮 Educational Focus
+
 - Clean and readable logic
 - Set-based deduplication throughout
 - Ideal for beginners in OSINT / password-wordlist theory
 - No external dependencies (Basic CLI)
 
 ### 🎨 Rich CLI (Interactive Mode)
+
 - Beautiful colored terminal UI using Rich
 - Guided wizard-style prompts with optional fields
 - Animated spinner while generating
 - Structured panel + table summary of results
 
 ### ⚡ Dual Mode Support
+
 - 🧼 Basic CLI (`main.py`) → argparse flags, no dependencies
 - 🎨 Rich CLI (`interactive.py`) → guided wizard with colors and panels
 
@@ -124,6 +140,7 @@ python interactive.py
 ```
 
 ### 5️⃣ Follow the prompts for Interactive Version
+
 - Enter first name
 - Enter last name
 - Enter nickname *(optional)*
