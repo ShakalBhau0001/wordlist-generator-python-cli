@@ -125,6 +125,8 @@ pip install rich
 pip install -r requirements.txt
 ```
 
+> ℹ️ The Basic CLI (`main.py`) needs **no external dependencies** — Rich is only required for `interactive.py`.
+
 ### 4️⃣ Running the Project
 
 #### Basic CLI Version
@@ -189,6 +191,23 @@ python main.py -f John -l Doe -o custom --min-len 8 --max-len 16
 - Progress bar for the Basic CLI version
 - Add input validation enhancements
 - Export directly in Hashcat/John-compatible formats
+
+---
+
+## 📦 Related Projects
+
+This repository focuses on a **specific encoding technique** implemented
+as a **command-line (CLI) learning project**.
+
+The goal of this project is to:
+
+- Understand how Base64 encoding works at a practical level
+- Practice decoding challenges commonly seen in **CTFs**
+- Learn how simple CLI-based tools are structured
+
+For more advanced, security-focused CLI tools, check out:
+
+> 🔗 **[CLI Projects](https://github.com/stars/ShakalBhau0001/lists/cli-projects)**
 
 ---
 
