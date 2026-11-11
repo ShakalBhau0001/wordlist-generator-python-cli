@@ -183,6 +183,8 @@ def build_parser() -> argparse.ArgumentParser:
 def main():
     parser = build_parser()
     args = parser.parse_args()
+    if args.min_len > args.max_len:
+        parser.error("--min-len cannot be greater than --max-len")
     print("=" * 40)
     print("Wordlist Generator")
     print("=" * 40)
